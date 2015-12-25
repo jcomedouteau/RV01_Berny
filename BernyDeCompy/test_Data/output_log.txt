@@ -1,0 +1,127 @@
+Initialize engine version: 5.1.2f1 (afd2369b692a)
+[VRDevice] Successfully created device oculus.
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: AMD Radeon HD 7400M Series (ID=0x6760)
+    Vendor:   ATI
+    VRAM:     1010 MB
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\La nicoise\Documents\-UTC-\GI05-A15\RV01\BernyDeCompy1\BernyDeCompy\test_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\La nicoise\Documents\-UTC-\GI05-A15\RV01\BernyDeCompy1\BernyDeCompy\test_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\La nicoise\Documents\-UTC-\GI05-A15\RV01\BernyDeCompy1\BernyDeCompy\test_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
+Loading C:\Users\La nicoise\Documents\-UTC-\GI05-A15\RV01\BernyDeCompy1\BernyDeCompy\test_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
+Platform assembly: C:\Users\La nicoise\Documents\-UTC-\GI05-A15\RV01\BernyDeCompy1\BernyDeCompy\test_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\La nicoise\Documents\-UTC-\GI05-A15\RV01\BernyDeCompy1\BernyDeCompy\test_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\La nicoise\Documents\-UTC-\GI05-A15\RV01\BernyDeCompy1\BernyDeCompy\test_Data\Managed\Assembly-UnityScript-firstpass.dll (this message is harmless)
+Loading C:\Users\La nicoise\Documents\-UTC-\GI05-A15\RV01\BernyDeCompy1\BernyDeCompy\test_Data\Managed\Assembly-UnityScript-firstpass.dll into Unity Child Domain
+Platform assembly: C:\Users\La nicoise\Documents\-UTC-\GI05-A15\RV01\BernyDeCompy1\BernyDeCompy\test_Data\Managed\Assembly-UnityScript.dll (this message is harmless)
+Loading C:\Users\La nicoise\Documents\-UTC-\GI05-A15\RV01\BernyDeCompy1\BernyDeCompy\test_Data\Managed\Assembly-UnityScript.dll into Unity Child Domain
+Platform assembly: C:\Users\La nicoise\Documents\-UTC-\GI05-A15\RV01\BernyDeCompy1\BernyDeCompy\test_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\La nicoise\Documents\-UTC-\GI05-A15\RV01\BernyDeCompy1\BernyDeCompy\test_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\La nicoise\Documents\-UTC-\GI05-A15\RV01\BernyDeCompy1\BernyDeCompy\test_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\La nicoise\Documents\-UTC-\GI05-A15\RV01\BernyDeCompy1\BernyDeCompy\test_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+- Completed reload, in  0.117 seconds
+desktop: 1600x900 60Hz; virtual: 1600x900 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.
+<RI> Initialized touch support.
+[CAPI] LibOVR module is located at C:\WINDOWS\SYSTEM32\LibOVRRT32_0_6.dll
+
+ 
+(Filename:  Line: 52)
+
+[IPC] Call Stats for SetInitialState : x1: C2S=20.0988, S2C=25.658, Runtime=60.724 (microseconds) C2Ssize=80, S2Csize=81 (bytes)
+
+ 
+(Filename:  Line: 52)
+
+[IPC] Call Stats for IsLatencyTesterAvailable : x1: C2S=12.829, S2C=5.13161, Runtime=0.855268 (microseconds) C2Ssize=33, S2Csize=18 (bytes)
+
+ 
+(Filename:  Line: 52)
+
+[IPC] Call Stats for Hmd_Create : x1: C2S=7.69741, S2C=6.41451, Runtime=12.4014 (microseconds) C2Ssize=19, S2Csize=171 (bytes)
+
+ 
+(Filename:  Line: 52)
+
+[IPC] Call Stats for Hmd_GetHmdInfo : x1: C2S=9.40795, S2C=9.83558, Runtime=6.84214 (microseconds) C2Ssize=23, S2Csize=803 (bytes)
+
+ 
+(Filename:  Line: 52)
+
+[IPC] Call Stats for SetNumberValue : x1: C2S=13.6843, S2C=6.41451, Runtime=8.12504 (microseconds) C2Ssize=55, S2Csize=25 (bytes)
+
+ 
+(Filename:  Line: 52)
+
+[IPC] Call Stats for SetNumberValues : x1: C2S=9.83558, S2C=13.2567, Runtime=5.98687 (microseconds) C2Ssize=81, S2Csize=25 (bytes)
+
+ 
+(Filename:  Line: 52)
+
+[IPC] Call Stats for Hmd_SetEnabledCaps : x1: C2S=6.84214, S2C=5.55924, Runtime=201.843 (microseconds) C2Ssize=35, S2Csize=33 (bytes)
+
+ 
+(Filename:  Line: 52)
+
+[IPC] Call Stats for Hmd_ConfigureTracking : x1: C2S=6.84214, S2C=5.13161, Runtime=135.132 (microseconds) C2Ssize=46, S2Csize=25 (bytes)
+
+ 
+(Filename:  Line: 52)
+
+[IPC] Call Stats for Compositor_Create : x1: C2S=29.0791, S2C=12.4014, Runtime=8833.63 (microseconds) C2Ssize=100, S2Csize=52 (bytes)
+
+ 
+(Filename:  Line: 52)
+
+[IPC] Call Stats for Compositor_TextureSet_Create : x1: C2S=17.1054, S2C=7.69741, Runtime=156.942 (microseconds) C2Ssize=69, S2Csize=33 (bytes)
+
+ 
+(Filename:  Line: 52)
+
+Platform assembly: C:\Users\La nicoise\Documents\-UTC-\GI05-A15\RV01\BernyDeCompy1\BernyDeCompy\test_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\La nicoise\Documents\-UTC-\GI05-A15\RV01\BernyDeCompy1\BernyDeCompy\test_Data\Managed\System.dll (this message is harmless)
+Setting up 1 worker threads for Enlighten.
+  Thread -> id: 2f20 -> priority: 1 
+[IPC] Call Stats for Compositor_EndFrame : x1: C2S=23.9475, S2C=23.0922, Runtime=34003.3 (microseconds) C2Ssize=995, S2Csize=89 (bytes)
+
+ 
+(Filename:  Line: 52)
+
+[IPC] Call Stats for Compositor_EndFrame : x117: C2S=28.4504, S2C=21.5973, Runtime=67225.3 (microseconds) C2Ssize=995, S2Csize=89 (bytes)
+
+ 
+(Filename:  Line: 52)
+
+[IPC] Call Stats for Compositor_EndFrame : x107: C2S=28.2198, S2C=21.7494, Runtime=76240.8 (microseconds) C2Ssize=994, S2Csize=89 (bytes)
+
+ 
+(Filename:  Line: 52)
+
+[IPC] Call Stats for Compositor_EndFrame : x138: C2S=29.3425, S2C=19.5906, Runtime=55242.5 (microseconds) C2Ssize=995, S2Csize=89 (bytes)
+
+ 
+(Filename:  Line: 52)
+
+[IPC] Call Stats for Compositor_EndFrame : x99: C2S=28.1288, S2C=20.3148, Runtime=84187.6 (microseconds) C2Ssize=995, S2Csize=89 (bytes)
+
+ 
+(Filename:  Line: 52)
+
+[IPC] Call Stats for Compositor_DestroyMirror : x1: C2S=17.1054, S2C=29.5067, Runtime=9.83558 (microseconds) C2Ssize=33, S2Csize=25 (bytes)
+
+ 
+(Filename:  Line: 52)
+
+[IPC] Call Stats for Compositor_Destroy : x1: C2S=6.41451, S2C=10.2632, Runtime=75956.8 (microseconds) C2Ssize=27, S2Csize=25 (bytes)
+
+ 
+(Filename:  Line: 52)
+
+[IPC] Call Stats for Hmd_Release : x1: C2S=25.658, S2C=6.41451, Runtime=322.436 (microseconds) C2Ssize=20, S2Csize=25 (bytes)
+
+ 
+(Filename:  Line: 52)
+
