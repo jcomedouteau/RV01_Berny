@@ -11,10 +11,8 @@ public class Obstacle : MonoBehaviour {
 	void Update () {
 	}
 
-	void OnTriggerEnter(Collider other) {
-		if (other.tag == "obstacle") {
-			Debug.Log ("Vous etes MORT");
-		}
+	void OnCollisionEnter(Collision other) {
+		Application.LoadLevel (0);
 	}
 	                    
 }
