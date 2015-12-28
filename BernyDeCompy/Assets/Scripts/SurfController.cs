@@ -13,10 +13,8 @@ public class SurfController : MonoBehaviour {
 		cam = GameObject.Find ("Main Camera");
 	}
 
-	void LateUpdate (){
-		//transform.Rotate (cam.transform.right, GetRotationZone ());
-	}
-	
+
+
 	// Update is called once per frame
 	void Update () {
 		//On fait avance le surf
@@ -26,7 +24,8 @@ public class SurfController : MonoBehaviour {
 			Application.LoadLevel(1);
 		}
 		KeyboardMovements();
-		GameInstability ();
+		//GameInstability ();
+		CameraControl();
 	}
 
 	void KeyboardMovements()
@@ -34,11 +33,11 @@ public class SurfController : MonoBehaviour {
 
 		if(Input.GetKey(KeyCode.LeftArrow))
 		{
-			transform.Rotate(transform.forward, -rSpeed);
+			transform.Rotate (new Vector3(-rSpeed,0,0));
 		}
 		if(Input.GetKey(KeyCode.RightArrow))
 		   {
-			transform.Rotate(transform.forward, rSpeed);
+			transform.Rotate (new Vector3(rSpeed,0,0));
 		}
 
 		if(Input.GetKey("q")|| Input.GetKey (KeyCode.JoystickButton0)){
@@ -51,19 +50,9 @@ public class SurfController : MonoBehaviour {
 		}
 	}
 
-	//arrivé à la fin du jeu
-	void OnTriggerEnter (Collider col)
+	void CameraControl ()
 	{
-		if(col.gameObject.tag == "endOfGame")
-		{
-			Application.LoadLevel(0);
-		}
-
-		if (col.gameObject.tag == "obstacle") {
-			Debug.Log ("Vous etes MORT");
-			//yield return new WaitForSeconds(2);
-			Application.LoadLevel(1);
-		}
+		throw new System.NotImplementedException ();
 	}
 
 	int GetRotationZone (){
