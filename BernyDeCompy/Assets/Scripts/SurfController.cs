@@ -31,6 +31,7 @@ public class SurfController : MonoBehaviour {
 	void KeyboardMovements()
 	{
 
+		//Rotation de la planche, equilibre -> Réalisé avec la caméra dans le jeu
 		if(Input.GetKey(KeyCode.LeftArrow))
 		{
 			transform.Rotate (new Vector3(-rSpeed,0,0));
@@ -40,22 +41,23 @@ public class SurfController : MonoBehaviour {
 			transform.Rotate (new Vector3(rSpeed,0,0));
 		}
 
+		//Rotation de la planche vers la gauche et la droite (direction)
 		if(Input.GetKey("q")|| Input.GetKey (KeyCode.JoystickButton0)){
-			transform.Rotate(transform.up, -rSpeed);
+			transform.Rotate(new Vector3(0,1,0), -rSpeed);
 		}
 
 		if(Input.GetKey("d") || Input.GetKey (KeyCode.JoystickButton3))
 		{
-			transform.Rotate(transform.up, rSpeed);
+			transform.Rotate(new Vector3(0,1,0), rSpeed);
 		}
 	}
 
 	void CameraControl ()
 	{
-		throw new System.NotImplementedException ();
+		transform.Rotate(new Vector3(GetRotationZone()/10,0,0));
 	}
 
-	int GetRotationZone (){
+	float GetRotationZone (){
 		int val = 0;
 		if (cam.transform.localEulerAngles.z > 5 && cam.transform.localEulerAngles.z < 15)
 			val = -1;
