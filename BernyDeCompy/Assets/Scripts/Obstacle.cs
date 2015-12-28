@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class Obstacle : MonoBehaviour {
-
+	public GameManager GM;
 	// Use this for initialization
 	void Start () {
 	}
@@ -12,7 +12,11 @@ public class Obstacle : MonoBehaviour {
 	}
 
 	void OnCollisionEnter(Collision other) {
-		Application.LoadLevel (0);
+		if (other.gameObject.tag != "grandmother") {
+			GM.die ();
+		} else {
+			GM.addScore(1000);
+		}
 	}
 	                    
 }

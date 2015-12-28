@@ -9,6 +9,7 @@ public class SurfController : MonoBehaviour {
 	public float rSpeed = 10f;
 	int result ;
 	GameObject cam;
+	public GameManager GM;
 
 	// Use this for initialization
 	void Start () {
@@ -27,7 +28,7 @@ public class SurfController : MonoBehaviour {
 
 		//Are you dead?
 		if (transform.rotation.eulerAngles.x > 20 && transform.rotation.eulerAngles.x < 340) {
-			Application.LoadLevel(0);
+			GM.die();
 		}
 	}
 
