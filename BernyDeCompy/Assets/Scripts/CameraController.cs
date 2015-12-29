@@ -2,18 +2,20 @@
 using System.Collections;
 
 public class CameraController : MonoBehaviour {
-	
-	public GameObject baseObject; // l’objet à suivre
-	
-	private Vector3 offset; // L’offset initial
-	
-	void Start ()
-	{
-		offset = transform.position - baseObject.transform.position;
-	}
-	
+
 	void LateUpdate ()
 	{
-		transform.position = baseObject.transform.position + offset;
+		//Head on the left
+		if(Input.GetKey("k"))
+		{
+			transform.Rotate(Vector3.forward);
+		}
+
+		//Head on the right
+		if(Input.GetKey("m"))
+		{
+			transform.Rotate(-Vector3.forward);
+		}
+
 	}
 }
