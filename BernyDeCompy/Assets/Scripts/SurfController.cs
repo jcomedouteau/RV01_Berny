@@ -26,7 +26,7 @@ public class SurfController : MonoBehaviour {
 			Application.LoadLevel(1);
 		}
 		KeyboardMovements();
-		GameInstability ();
+		//GameInstability ();
 	}
 
 	void KeyboardMovements()
