@@ -6,6 +6,7 @@ public class GameManager : MonoBehaviour {
 	private int score;
 	private bool alive;
 	private bool dead;
+	private int difficulty=1;
 	// Use this for initialization
 	void Awake(){
 		DontDestroyOnLoad (this);
@@ -30,6 +31,10 @@ public class GameManager : MonoBehaviour {
 
 	public int getScore(){
 		return score;
+	}
+
+	public int getSpeed (){
+		return difficulty;
 	}
 
 	public void die(){

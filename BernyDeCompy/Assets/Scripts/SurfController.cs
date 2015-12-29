@@ -4,9 +4,9 @@ using System.Collections;
 
 public class SurfController : MonoBehaviour {
 	//Vitesse de déplacement
-	public float tSpeed = 1f;
+	public float tSpeed ;
 	//Vitesse de rotation
-	public float rSpeed = 10f;
+	public float rSpeed ;
 	int result ;
 	GameObject cam;
 	public GameManager GM;
@@ -14,14 +14,14 @@ public class SurfController : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		cam = GameObject.Find ("Main Camera");
+		tSpeed = 2;
+		rSpeed = 2;
 	}
-
-
 
 	// Update is called once per frame
 	void Update () {
 		//On fait avance le surf
-		transform.position += new Vector3 (-transform.right.x*tSpeed, 0 , -transform.right.z*tSpeed);
+		transform.position += (Vector3.Normalize(new Vector3 (-transform.right.x, 0 , -transform.right.z)))*tSpeed*GM.getSpeed();
 		KeyboardMovements();
 		//GameInstability ();
 		CameraControl();
