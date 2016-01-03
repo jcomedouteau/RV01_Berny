@@ -21,7 +21,8 @@ public class Obstacle : MonoBehaviour {
 	}
 
 	void OnTriggerEnter(Collider other) {
-		if (other.gameObject.tag != "grandmother") {
+		if (other.gameObject.tag != "grandmother") {			
+			Debug.Log("coucou");
 			GM.die ();
 		} else {
 			if(Time.time - lastEnteranceTime > 2)
