@@ -6,8 +6,8 @@ public class Obstacle : MonoBehaviour {
 	public GameManager GM;
 	public AudioClip mamieFarte;
 	private AudioSource source;
-	private float volLowRange = .5f;
-	private float volHighRange = 1.0f;
+	private float volLowRange = 3f;
+	private float volHighRange = 5.0f;
 	// Use this for initialization
 	void Start () {
 		GM = GameObject.Find("GameManager").GetComponent<GameManager>();
