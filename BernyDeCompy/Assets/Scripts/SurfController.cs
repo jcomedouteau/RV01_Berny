@@ -13,6 +13,7 @@ public class SurfController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		GM = GameObject.Find("GameManager").GetComponent<GameManager>();
 		cam = GameObject.Find ("Main Camera");
 		tSpeed = 2;
 		rSpeed = 2;
