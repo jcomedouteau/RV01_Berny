@@ -21,8 +21,8 @@ public class Obstacle : MonoBehaviour {
 	}
 
 	void OnTriggerEnter(Collider other) {
+		//Si on rencontre une grand mere on augmente les points, sinon on meurt.
 		if (other.gameObject.tag != "grandmother") {			
-			Debug.Log("coucou");
 			GM.die ();
 		} else {
 			if(Time.time - lastEnteranceTime > 2)
@@ -31,8 +31,6 @@ public class Obstacle : MonoBehaviour {
 				GM.addScore(1000);
 				lastEnteranceTime=Time.time;
 			}
-
-			//Destroy(other.gameObject);
 		}
 	}
 	                    
