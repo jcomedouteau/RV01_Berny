@@ -3,7 +3,11 @@ using System.Collections;
 
 
 public class GameManager : MonoBehaviour
-{
+{	public AudioClip casse;
+	private AudioSource source;
+	private float volLowRange = 3f;
+	private float volHighRange = 5.0f;
+	float vol;
 	private string scoreTexte;
 
 	static GameManager _instance;
@@ -25,6 +29,8 @@ public class GameManager : MonoBehaviour
 
 	void Start () {
 		InitJEU ();
+		source = GetComponent<AudioSource> ();
+		vol = Random.Range (volLowRange, volHighRange);
 	}
 
 	public void InitJEU(){
@@ -59,6 +65,7 @@ public class GameManager : MonoBehaviour
 	}
 
 	public void die(){
+		source.PlayOneShot(casse, vol);
 		alive = false;
 		Application.LoadLevel (2);
 	}

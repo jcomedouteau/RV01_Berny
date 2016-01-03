@@ -8,10 +8,12 @@ public class Obstacle : MonoBehaviour {
 	private AudioSource source;
 	private float volLowRange = 3f;
 	private float volHighRange = 5.0f;
+	float vol;
 	// Use this for initialization
 	void Start () {
 		GM = GameObject.Find("GameManager").GetComponent<GameManager>();
 		source = GetComponent<AudioSource> ();
+		vol = Random.Range (volLowRange, volHighRange);
 	}
 	
 	// Update is called once per frame
@@ -24,7 +26,6 @@ public class Obstacle : MonoBehaviour {
 		} else {
 			if(Time.time - lastEnteranceTime > 2)
 			{
-				float vol = Random.Range (volLowRange, volHighRange);
 				source.PlayOneShot(mamieFarte,vol);
 				GM.addScore(1000);
 				lastEnteranceTime=Time.time;
