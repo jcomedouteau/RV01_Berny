@@ -64,10 +64,12 @@ public class GameManager : MonoBehaviour
 	}
 
 	void OnGUI () {
-		// Make a background box
-		GUI.Box (new Rect (750, 0, 90, 50), "Score");
-		scoreTexte = score.ToString();
-		// Make the first button. If it is pressed, Application.Loadlevel (1) will be executed
-		GUI.Box (new Rect (760, 25, 70, 20), scoreTexte);
+		if (alive) {
+			// Make a background box
+			GUI.Box (new Rect (750, 0, 90, 50), "Score");
+			scoreTexte = score.ToString ();
+			// Make the first button. If it is pressed, Application.Loadlevel (1) will be executed
+			GUI.Box (new Rect (760, 25, 70, 20), scoreTexte);
+		}
 	}
 }
