@@ -20,17 +20,20 @@ public class Obstacle : MonoBehaviour {
 	void Update () {
 	}
 
+
+
 	void OnTriggerEnter(Collider other) {
 		//Si on rencontre une grand mere on augmente les points, sinon on meurt.
-		if (other.gameObject.tag != "grandmother") {			
-			GM.die ();
-		} else {
-			if(Time.time - lastEnteranceTime > 2)
-			{
-				source.PlayOneShot(mamieFarte,vol);
-				GM.addScore(1000);
-				lastEnteranceTime=Time.time;
+		if (other.gameObject.tag == "grandmother") {		
+			if (Time.time - lastEnteranceTime > 2) {
+				source.PlayOneShot (mamieFarte, vol);
+				GM.addScore (1000);
+				lastEnteranceTime = Time.time;
 			}
+		} else if (other.gameObject.tag == "endOfGame") {
+			GM.endOfGame();
+		} else {
+			GM.die ();
 		}
 	}
 	                    

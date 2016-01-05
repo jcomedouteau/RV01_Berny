@@ -64,6 +64,11 @@ public class GameManager : MonoBehaviour
 		return difficulty;
 	}
 
+	public void endOfGame(){
+		alive = false;
+		Application.LoadLevel (3);
+	}
+
 	public void die(){
 		source.PlayOneShot(casse, vol);
 		alive = false;
