@@ -60,8 +60,9 @@ public class GameManager : MonoBehaviour
 		return score;
 	}
 
-	public int getSpeed (){
-		return difficulty;
+	public float getSpeed (){
+		float ratio = 1.0f + getScore()/1000;
+		return ratio;
 	}
 
 	public void endOfGame(){
