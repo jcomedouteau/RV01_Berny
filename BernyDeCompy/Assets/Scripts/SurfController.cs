@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 
 public class SurfController : MonoBehaviour {
@@ -7,9 +8,11 @@ public class SurfController : MonoBehaviour {
 	public float tSpeed ;
 	//Vitesse de rotation
 	public float rSpeed ;
+	public Image left;
+	public Image right;
 	int result ;
 	GameObject cam;
-	public GameManager GM;
+	GameManager GM;
 
 	// Use this for initialization
 	void Start () {
@@ -26,7 +29,7 @@ public class SurfController : MonoBehaviour {
 		KeyboardMovements();
 		//GameInstability ();
 		CameraControl();
-
+		OrientationInformation ();
 		//Are you dead?
 		if (transform.rotation.eulerAngles.x > 20 && transform.rotation.eulerAngles.x < 340) {
 			GM.die();
@@ -83,8 +86,20 @@ public class SurfController : MonoBehaviour {
 			val = 3;
 		if (cam.transform.localEulerAngles.z >= 270 && cam.transform.localEulerAngles.z < 310)
 			val = 4;
-		return val;
-	
+		return val;	
+	}
+
+	void OrientationInformation(){
+		if (transform.rotation.eulerAngles.x > 0 && transform.rotation.eulerAngles.x < 180) {
+			left.enabled = true;
+			right.enabled = false;
+		} else if (transform.rotation.eulerAngles.x > 180) {
+			left.enabled = false;
+			right.enabled = true;		
+		} else {
+			left.enabled = false;
+			right.enabled = false;		
+		}
 	}
 
 	//crée une instabilité aléatoire

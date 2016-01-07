@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
-
 
 public class GameManager : MonoBehaviour
 {	public AudioClip casse;
@@ -13,7 +13,6 @@ public class GameManager : MonoBehaviour
 	static GameManager _instance;
 	private int score;
 	private bool alive;
-	private bool dead;
 	private int difficulty=1;
 	// Use this for initialization
 
@@ -24,32 +23,25 @@ public class GameManager : MonoBehaviour
 		} else {
 			Destroy (gameObject);
 		}
-
 	}
 
 	void Start () {
-		InitJEU ();
+		alive = false;
+	}
+
+	public void StartGame(){
+		Application.LoadLevel (1);
+		score = 0;
+		alive = true;
 		source = GetComponent<AudioSource> ();
 		vol = Random.Range (volLowRange, volHighRange);
 	}
 
-	public void InitJEU(){
-		score = 0;
-		alive = true;
-		dead = false;
-	}
-	
 	// Update is called once per frame
 	void Update () {
 		if (alive) {
 			score++;
 		}
-	}
-
-	public void revive (){
-		score = 0;
-		alive = true;
-		//dead = false;
 	}
 
 	public void addScore(int toAdd){
@@ -67,22 +59,12 @@ public class GameManager : MonoBehaviour
 
 	public void endOfGame(){
 		alive = false;
-		Application.LoadLevel (3);
+		Application.LoadLevel (2);
 	}
 
 	public void die(){
 		source.PlayOneShot(casse, vol);
 		alive = false;
 		Application.LoadLevel (2);
-	}
-
-	void OnGUI () {
-		if (alive) {
-			// Make a background box
-			GUI.Box (new Rect (750, 0, 90, 50), "Score");
-			scoreTexte = score.ToString ();
-			// Make the first button. If it is pressed, Application.Loadlevel (1) will be executed
-			GUI.Box (new Rect (760, 25, 70, 20), scoreTexte);
-		}
 	}
 }

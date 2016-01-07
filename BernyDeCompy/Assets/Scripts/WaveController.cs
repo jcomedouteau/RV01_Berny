@@ -4,9 +4,10 @@ using System.Collections;
 public class WaveController : MonoBehaviour {
 
 	private float speed;
-	public GameManager GM;
+	GameManager GM;
 
 	void Start () {
+		GM = GameObject.Find("GameManager").GetComponent<GameManager>();
 		}
 	
 	void Update () {

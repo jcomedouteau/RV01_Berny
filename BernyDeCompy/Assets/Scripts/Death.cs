@@ -1,26 +1,20 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
+using UnityEngine.Events;
 
 public class Death : MonoBehaviour {
 	GameManager GM;
+	public Button but;
 	void start(){
-
+		GM = GameObject.Find("GameManager").GetComponent<GameManager>();
 	}
 
-	void OnGUI() {
-		GM = GameObject.Find("GameManager").GetComponent<GameManager>();
+	public void restart(){
+		GameObject.Find("GameManager").GetComponent<GameManager>().StartGame ();
+	}
 
-		// Make a background box
-		GUI.Box (new Rect (600, 100, 200, 100), "Désolé, vous etes mort! \n Votre score : "+GM.getScore().ToString());		
-		// Make the first button. If it is pressed, Application.Loadlevel (1) will be executed
-		if (GUI.Button (new Rect (610, 170, 180, 20), "Recommencer")) {
-			GM.InitJEU ();
-			Application.LoadLevel (1);
-		}
-		// Make the second button. If it is pressed, Application.Loadlevel (1) will be executed
-		if (GUI.Button (new Rect (610, 140, 180, 20), "Retour au menu")) {
-			//GM.revive ();
-			Application.LoadLevel (0);
-		}
+	public void menu(){
+		Application.LoadLevel (0);
 	}
 }

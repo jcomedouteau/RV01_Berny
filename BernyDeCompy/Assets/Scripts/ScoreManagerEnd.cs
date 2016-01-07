@@ -2,7 +2,7 @@
 using System.Collections;
 using UnityEngine.UI;
 
-public class ScoreManager : MonoBehaviour {
+public class ScoreManagerEnd : MonoBehaviour {
 	private GameManager GM;
 	public Text tex;
 	// Use this for initialization
@@ -12,6 +12,6 @@ public class ScoreManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		tex.text = "Score : " + GM.getScore ();
+		tex.text = "Tu as perdu avec un score de : " + GM.getScore ();
 	}
 }
