@@ -15,7 +15,7 @@ public class GameManager : MonoBehaviour{
 	//le score
 	private int score;
 	//la difficulté
-	public float difficulty=2;
+	public float difficulty=2f;
 	//Le singleton
 	static GameManager _instance;
 	//L'utilisateur est-il en vie?
@@ -62,8 +62,7 @@ public class GameManager : MonoBehaviour{
 	}
 
 	public float getSpeed (){
-		float ratio = difficulty/2 + getScore()/1000;
-		Debug.Log (ratio);
+		float ratio = difficulty + getScore()/1000f;
 		return ratio;
 	}
 

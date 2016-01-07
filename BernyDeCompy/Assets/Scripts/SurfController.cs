@@ -4,8 +4,6 @@ using UnityEngine.UI;
 
 
 public class SurfController : MonoBehaviour {
-	//Vitesse de déplacement
-	public float tSpeed ;
 	//Vitesse de rotation
 	public float rSpeed ;
 	//Images gauches et droite
@@ -19,14 +17,13 @@ public class SurfController : MonoBehaviour {
 	void Start () {
 		GM = GameObject.Find("GameManager").GetComponent<GameManager>();
 		cam = GameObject.Find ("Main Camera");
-		tSpeed = 2;
-		rSpeed = 2;
+		rSpeed = 1;
 	}
 
 	// Update is called once per frame
 	void Update () {
 		//On fait avance le surf
-		transform.position += (Vector3.Normalize(new Vector3 (-transform.right.x, 0 , -transform.right.z)))*tSpeed*GM.getSpeed();
+		transform.position += (Vector3.Normalize(new Vector3 (-transform.right.x, 0 , -transform.right.z)))*GM.getSpeed();
 		KeyboardMovements();
 		//GameInstability ();
 		CameraControl();
@@ -109,7 +106,7 @@ public class SurfController : MonoBehaviour {
 
 	//crée une instabilité aléatoire
 	void GameInstability (){
-		result = Random.Range (0, 10);
+		result = Random.Range (0, 25);
 		if (result == 0) {
 			if (transform.rotation.eulerAngles.x > 0 && transform.rotation.eulerAngles.x < 180) {
 				transform.Rotate (new Vector3(rSpeed,0,0));
