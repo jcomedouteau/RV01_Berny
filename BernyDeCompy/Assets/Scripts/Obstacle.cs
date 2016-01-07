@@ -20,7 +20,9 @@ public class Obstacle : MonoBehaviour {
 	void Update () {
 	}
 
-
+	void OnCollisionEnter(Collision col) {
+		GM.die ();
+	}
 
 	void OnTriggerEnter(Collider other) {
 		//Si on rencontre une grand mere on augmente les points, sinon on meurt.
