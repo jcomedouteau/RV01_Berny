@@ -2,18 +2,24 @@
 using UnityEngine.UI;
 using System.Collections;
 
-public class GameManager : MonoBehaviour
-{	public AudioClip casse;
+public class GameManager : MonoBehaviour{	
+	//Musiques associées et volumes
+	public AudioClip casse;
 	private AudioSource source;
 	private float volLowRange = 3f;
 	private float volHighRange = 5.0f;
 	float vol;
-	private string scoreTexte;
 
-	static GameManager _instance;
+	//Le texte du score
+	private string scoreTexte;
+	//le score
 	private int score;
+	//la difficulté
+	public float difficulty=2;
+	//Le singleton
+	static GameManager _instance;
+	//L'utilisateur est-il en vie?
 	private bool alive;
-	private int difficulty=1;
 	// Use this for initialization
 
 	public virtual void Awake(){
@@ -29,6 +35,7 @@ public class GameManager : MonoBehaviour
 		alive = false;
 	}
 
+	//Début de la partie, on initialise tout.
 	public void StartGame(){
 		Application.LoadLevel (1);
 		score = 0;
@@ -44,24 +51,29 @@ public class GameManager : MonoBehaviour
 		}
 	}
 
+	//Quand on prend une mamie, on ajoute des points
 	public void addScore(int toAdd){
 		score += toAdd;
 	}
 
+	//retourne le score
 	public int getScore(){
 		return score;
 	}
 
 	public float getSpeed (){
-		float ratio = 1.0f + getScore()/1000;
+		float ratio = difficulty/2 + getScore()/1000;
+		Debug.Log (ratio);
 		return ratio;
 	}
 
+	//On atteind la fin du niveau
 	public void endOfGame(){
 		alive = false;
 		Application.LoadLevel (2);
 	}
 
+	//Mort du personnage
 	public void die(){
 		source.PlayOneShot(casse, vol);
 		alive = false;

@@ -8,6 +8,7 @@ public class SurfController : MonoBehaviour {
 	public float tSpeed ;
 	//Vitesse de rotation
 	public float rSpeed ;
+	//Images gauches et droite
 	public Image left;
 	public Image right;
 	int result ;
@@ -34,8 +35,10 @@ public class SurfController : MonoBehaviour {
 		if (transform.rotation.eulerAngles.x > 20 && transform.rotation.eulerAngles.x < 340) {
 			GM.die();
 		}
+		//Pour quand on joue "a la main"
 		KeyboardMovements();
-		//GameInstability ();
+		//Rotations aléatoires
+		GameInstability ();
 
 	}
 
@@ -68,6 +71,7 @@ public class SurfController : MonoBehaviour {
 		transform.Rotate(new Vector3(GetRotationZone()/10,0,0));
 	}
 
+	//Retourne le degré de rotation de la caméra par rapport à la planche.
 	float GetRotationZone (){
 		int val = 0;
 		if (cam.transform.localEulerAngles.z > 5 && cam.transform.localEulerAngles.z < 15)
@@ -89,6 +93,7 @@ public class SurfController : MonoBehaviour {
 		return val;	
 	}
 
+	//affiche les images selon la rotation de la planche
 	void OrientationInformation(){
 		if (transform.rotation.eulerAngles.x > 0 && transform.rotation.eulerAngles.x < 180) {
 			left.enabled = true;

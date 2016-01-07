@@ -10,10 +10,6 @@ public class Death : MonoBehaviour {
 		GM = GameObject.Find("GameManager").GetComponent<GameManager>();
 	}
 
-	public void restart(){
-		GameObject.Find("GameManager").GetComponent<GameManager>().StartGame ();
-	}
-
 	public void menu(){
 		Application.LoadLevel (0);
 	}
