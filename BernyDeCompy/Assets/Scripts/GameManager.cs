@@ -33,6 +33,7 @@ public class GameManager : MonoBehaviour{
 
 	void Start () {
 		alive = false;
+
 	}
 
 	//Début de la partie, on initialise tout.
@@ -46,6 +47,10 @@ public class GameManager : MonoBehaviour{
 
 	// Update is called once per frame
 	void Update () {
+		if(Input.GetKey(KeyCode.P))
+		{
+			StartGame();
+		}
 		if (alive) {
 			score++;
 		}
